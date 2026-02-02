@@ -1,1 +1,76 @@
-<h1>Hola</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de datos interactivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Generar respuestas con IA</h1>
+    <p>Desbloqueando conocimientos, una entrada a la vez.</p>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- Panel izquierdo -->
+    <aside class="card card--input">
+      <h2>Datos de entrada</h2>
+
+      <label>
+        Palabra clave
+        <textarea id="keyword" placeholder="Ingresa un tema de interés para buscar tweets..."></textarea>
+      </label>
+
+      <!-- <label>
+        Cuentas de referencia a seguir
+        <input type="text" placeholder="Por ejemplo, @TechGiant, @InnovationLab" />
+      </label>
+
+      <label>
+        Tipos de comentarios
+        <input type="text" placeholder="Por ejemplo: comentarios, informes de errores" />
+      </label> -->
+
+      <button class="btn-primary" id="sendDataBtn">Buscar Tweets</button>
+    </aside>
+
+    <!-- Panel derecho -->
+    <section class="card card--results">
+      <h2>Resultados del análisis</h2>
+      <p class="intro">
+        A continuación, se muestran los conocimientos clave derivados de los datos proporcionados.
+      </p>
+
+      <article id="tweetsContainer" class="result-block">
+        <h3>Tweets encontrados</h3>
+        <ul>
+          <p class="empty" id="tweetsEmpty">No hay tweets aún</p>
+        </ul>
+      </article>
+
+      <article id="commentsContainer" class="result-block">
+        <h3>Comentarios encontrados</h3>
+        <ul>
+          <p class="empty" id="commentsEmpty">No hay comentarios aún</p>
+        </ul>
+      </article>
+
+      <!-- <article class="result-block">
+        <h3>Tipos de comentarios</h3>
+        <ul>
+          <li>Comentarios positivos: 45%</li>
+          <li>Informes de errores: 15%</li>
+          <li>Solicitudes de función: 30%</li>
+          <li>Elogios: 10%</li>
+        </ul>
+      </article> -->
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+
+</body>
+</html>
