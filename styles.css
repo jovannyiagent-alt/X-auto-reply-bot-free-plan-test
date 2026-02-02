@@ -1,0 +1,220 @@
+/* =========================
+   Variables globales
+========================= */
+:root {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-soft: #334155;
+  --accent: #2dd4bf;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --radius: 12px;
+}
+
+/* =========================
+   Reset básico
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* =========================
+   Header
+========================= */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  color: var(--accent);
+  font-size: 2.2rem;
+}
+
+.header p {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   Layout
+========================= */
+.dashboard {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Panel de entrada
+========================= */
+.card--input label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.card--input textarea,
+.card--input input {
+  margin-top: 0.4rem;
+  padding: 0.6rem;
+  background-color: var(--bg-soft);
+  border: none;
+  border-radius: 6px;
+  color: var(--text-main);
+  resize: none;
+}
+
+.card--input textarea {
+  min-height: 70px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--accent);
+  color: #022c22;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   Resultados
+========================= */
+.card--results .intro {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.result-block {
+  background-color: var(--bg-soft);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.result-block h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.result-block ul {
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.result-block li {
+  margin-bottom: 0.4rem;
+}
+
+.result-block span {
+  color: var(--accent);
+}
+.comment-item {
+  background: #1f2a3a;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.comment-item strong {
+  color: #2de2e6;
+}
+
+.comment-item p {
+  color: #e0e0e0;
+  margin: 6px 0;
+}
+
+.comment-item small {
+  color: #9aa4b2;
+}
+
+.btn-comments {
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Estado deshabilitado (contador) */
+.btn-comments--disabled,
+.btn-comments:disabled {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #9fb3c8;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+/* Estado habilitado */
+.btn-comments--active {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #ffffff;
+}
+
+.btn-comments--active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4);
+}
+
+.section-title {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4fd1ff;
+}
+
+.hidden {
+  display: none;
+}
+.section-title {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
