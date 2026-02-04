@@ -5,7 +5,7 @@ const N8N_WEBHOOK_URL = "https://n8n.neurozenlab.ovh/webhook/getTweets";
 const N8N_WEBHOOK_URL2 = "https://n8n.neurozenlab.ovh/webhook/getComments";
 const N8N_WEBHOOK_URL3 = "https://n8n.neurozenlab.ovh/webhook/getResponseAI";
 const N8N_WEBHOOK_URL4 = "https://n8n.neurozenlab.ovh/webhook/getPublishReply";
-const WAIT_TIME_MS = 0.4 * 60 * 1000; // 15 minutos
+const WAIT_TIME_MS = 0.04 * 60 * 1000; // 15 minutos
 
 // ===============================
 // Elementos del DOM
@@ -327,5 +327,6 @@ function renderEditableAIResponse(aiText) {
       alert("Respuesta publicada en X 🚀");
     });
 }
+
 
 
